@@ -123,7 +123,7 @@ public class KeycloakSecurityConfig extends KeycloakWebSecurityConfigurerAdapter
                 .exceptionHandling().accessDeniedHandler(new CustomAccessDeniedHandler())
                         .and()
 
-                .authorizeRequests() .antMatchers( "/favicon.ico").permitAll();
+                .authorizeRequests().antMatchers( "/favicon.ico").permitAll();
 
         expressionInterceptUrlRegistry = expressionInterceptUrlRegistry
                 .antMatchers("/iam/accounts/**")

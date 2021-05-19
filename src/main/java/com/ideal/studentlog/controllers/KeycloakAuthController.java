@@ -5,6 +5,7 @@ import com.ideal.studentlog.services.KeycloakRestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
+import org.springframework.http.MediaType;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
-@RequestMapping("/keycloak")
+@RequestMapping(path = "/keycloak", produces = MediaType.APPLICATION_JSON_VALUE)
 public class KeycloakAuthController {
 
     @Autowired
