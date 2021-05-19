@@ -125,12 +125,12 @@ public class KeycloakSecurityConfig extends KeycloakWebSecurityConfigurerAdapter
 
                 .authorizeRequests().antMatchers( "/favicon.ico").permitAll();
 
-        expressionInterceptUrlRegistry = expressionInterceptUrlRegistry
-                .antMatchers("/iam/accounts/**")
-                .hasAnyRole("MANAGER","ACTOR");
+       /* expressionInterceptUrlRegistry = expressionInterceptUrlRegistry
+                .antMatchers("/teachers/**")
+                .hasAnyRole("MANAGER","ACTOR");*/
       //  expressionInterceptUrlRegistry = expressionInterceptUrlRegistry.antMatchers("/iam/accounts/actor/*").hasRole("ACTOR");
 
-        expressionInterceptUrlRegistry.anyRequest().denyAll();
+        expressionInterceptUrlRegistry.anyRequest().authenticated();
     }
 
     @SuppressWarnings({ "rawtypes", "unchecked" })

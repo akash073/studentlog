@@ -42,7 +42,7 @@ public class ExceptionHandlers {
         return new ResponseEntity<>(responseDTO, status);
     }
 
-    @ExceptionHandler(Exception.class)
+    /*@ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponseDTO> handleException(Exception exception) {
         log.error(exception.getMessage());
 
@@ -55,6 +55,6 @@ public class ExceptionHandlers {
         );
 
         return new ResponseEntity<>(responseDTO, status);
-    }
+    }*/
 
 }
